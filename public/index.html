@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PreOrder Prototype</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><div><span class="eyebrow">HYPERLOCAL MEDIATOR</span><h1>PreOrder</h1><p>Turn a handwritten grocery list into a store request.</p></div><nav><button class="tab active" data-mode="customer">Customer</button><button class="tab" data-mode="merchant">Merchant</button></nav></header>
+<main>
+<section id="customer" class="mode"><div class="grid"><div class="card"><h2>Create a request</h2><p class="muted">Prototype OCR is simulated; no inventory catalog is maintained.</p><label>Name<input id="customerName" value="Demo Customer"></label><label>Phone<input id="phone" value="9000000099"></label><div class="two"><label>Latitude<input id="lat" type="number" step="any" value="17.385"></label><label>Longitude<input id="lng" type="number" step="any" value="78.486"></label></div><label>Fulfillment<select id="fulfillment"><option value="Store_Pickup">Store pickup</option><option value="Hyperlocal_Delivery">Hyperlocal delivery</option></select></label><div class="actions"><button id="digitize" class="secondary">✨ Digitize sample parchi</button><button id="submit" class="primary">Send request</button></div></div><div class="card"><h2>Itemized parchi</h2><div id="items"></div><button id="addItem" class="link">+ Add item</button><div id="customerResult" class="result"></div></div></div><div class="card"><div class="row"><h2>My requests</h2><button id="refreshCustomer" class="secondary small">Refresh</button></div><div id="customerRequests"></div></div></section>
+<section id="merchant" class="mode hidden"><div class="card"><div class="row"><div><span class="eyebrow">DEMO MERCHANT CONSOLE</span><h2>Incoming requests</h2></div><button id="refreshMerchant" class="secondary small">Refresh</button></div><div id="merchantRequests"></div></div></section>
+</main><footer>Prototype only · Request-based fulfillment · No inventory tracking</footer><script src="app.js"></script>
+</body></html>
